@@ -1,0 +1,100 @@
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+}
+
+.container {
+    width: 1168px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 90px;
+}
+
+section img {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 60px;
+}
+
+section p {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.about {
+    background-color: rgb(23, 23, 200);
+    color: #fff;
+    padding: 20px 90px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.about.charyn {
+    background-color: #ffaa00;
+}
+
+.about p {
+    margin-bottom: 50px;
+}
+
+.content {
+    background-color: #F1F1F1;
+    border-radius: 20px;
+    padding: 30px 90px 50px;
+    margin-bottom: 50px;
+}
+
+.content h2 {
+    margin: 0;
+}
+
+.content p {
+    font-size: 20px;
+    margin: 0;
+}
+
+li {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.content.price {
+    padding: 30px 90px 20px;
+}
+
+footer {
+    background-color: #001845;
+    padding: 50px 100px;
+    color: #F1F1F1;
+}
+
+.btn {
+    text-decoration: none;
+    font-family: "Roboto", serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #3D3BFF;
+    padding: 20px 54px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #026396;
+}
