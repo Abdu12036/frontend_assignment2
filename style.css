@@ -104,21 +104,30 @@ h1 {
 
 .tour-container {
   display: flex;           
-  gap: 50px;               
-  justify-content: center; 
+  justify-content: space-between; 
   margin-bottom: 100px;
 }
 
 .card {
   background: #f0f0f0;  
   border-radius: 20px;
-  width: 500px;            
+  width: 370px;            
+  height: 500px;
   text-align: center;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: background 0.5s ease; 
 }
 
+.card-btn {
+    border: none;
+    text-decoration: none;
+    border: solid 1px #000000;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
 
 .card.burabay:hover {
   background: #0466c8; 
@@ -128,6 +137,11 @@ h1 {
 .card.charyn:hover {
   background: #ff9e00; 
   color: #f0f0f0;
+}
+
+.card.emel:hover {
+    background: darkred; 
+    color: #f0f0f0;
 }
 
 .card img {
@@ -145,11 +159,6 @@ h1 {
 .card-text p {
     line-height: 22px;
     padding: 0 20px;
-}
-
-.card-link {
-    text-decoration: none;
-    color: inherit;
 }
 
 

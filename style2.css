@@ -11,7 +11,7 @@ body {
     padding-bottom: 90px;
 }
 
-section img {
+.head-img {
     width: 100%;
     border-radius: 30px;
     margin-bottom: 40px;
@@ -98,3 +98,31 @@ footer {
 .btn:hover {
     background-color: #026396;
 }
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: 379px 379px 379px; 
+  grid-template-rows: 190px 190px 190px ;
+  gap: 15px;
+  margin-bottom: 80px;
+}
+
+.gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
