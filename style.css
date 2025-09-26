@@ -15,11 +15,17 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 50px 70px;
 }
 
+nav {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+}
+
 nav a {
-    padding: 0 20px;
     text-decoration: none;
     font-size: 20px;
     color: #000000;
