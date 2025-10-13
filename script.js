@@ -56,6 +56,39 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
 
 
 
+const openPopupBtn = document.getElementById("openPopupBtn");
+const popupForm = document.getElementById("popupForm");
+const closePopupBtn = document.getElementById("closePopupBtn");
+
+// Open the popup
+openPopupBtn.addEventListener("click", () => {
+  popupForm.style.display = "flex";
+});
+
+// Close the popup by clicking the "X"
+closePopupBtn.addEventListener("click", () => {
+  popupForm.style.display = "none";
+});
+
+// Close the popup when clicking outside the form area
+window.addEventListener("click", (event) => {
+  if (event.target === popupForm) {
+    popupForm.style.display = "none";
+  }
+});
+
+// Handle form submission (for demo)
+document.getElementById("subscribeForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Thank you for subscribing to Burabay Tour updates!");
+  popupForm.style.display = "none";
+});
+
+
+
+
+
+
 function updateDateTime() {
   const now = new Date();
 
@@ -73,8 +106,6 @@ function updateDateTime() {
   document.getElementById("datetime").textContent = formattedDate;
 }
 
-// Update every second
 setInterval(updateDateTime, 1000);
 
-// Call once immediately
 updateDateTime();
