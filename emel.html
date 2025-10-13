@@ -11,6 +11,7 @@
 <body>
   <section class="container">
     <img class="head-img" src="images/altynemel.jpg" alt="Emel image">
+    <button id="colorBtn">Change Color</button>
     <h1>Tour to Altyn-Emel</h1>
     <p>$150 per person</p>
     <hr>
@@ -56,10 +57,78 @@
     </div>
 
     <a href="index.html#contact-form" class="btn">Book Now</a>
+
+    <section class="faq-section">
+    <h2 class="faq-heading">Burabay Tour – Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">1. Where is Burabay located?</button>
+      <div class="faq-answer">
+        <p>Burabay (also known as Borovoe) is located in northern Kazakhstan, about 250 km from Astana. It’s famous for its lakes, forests, and scenic mountain views.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">2. How long is the tour?</button>
+      <div class="faq-answer">
+        <p>The standard Burabay tour lasts one day, but multi-day packages with accommodation are also available for travelers who wish to explore the area more deeply.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">3. What is included in the tour price?</button>
+      <div class="faq-answer">
+        <p>The package typically includes transportation from Astana, a guided sightseeing tour, lunch, and entry tickets to Burabay National Park attractions.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">4. What should I bring with me?</button>
+      <div class="faq-answer">
+        <p>Bring comfortable shoes, warm clothing, sunscreen, a water bottle, and your camera to capture the stunning views of the lakes and rock formations.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">5. Is the tour suitable for families?</button>
+      <div class="faq-answer">
+        <p>Yes! The Burabay tour is family-friendly and suitable for all ages. There are easy hiking trails, picnic areas, and safe viewpoints.</p>
+      </div>
+    </div>
+  </section>
+
   </section>
   <footer>
         <h3>Made by Abdunur Amangeldiyev</h3>
         <p>from SE-2404</p>
   </footer>
+
+<script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const question = item.querySelector(".faq-question");
+
+      question.addEventListener("click", () => {
+        faqItems.forEach(i => {
+          if (i !== item) i.classList.remove("active");
+        });
+
+        item.classList.toggle("active");
+      });
+    });
+
+    const colorBtn = document.getElementById("colorBtn");
+
+    const colors = ["#f0f8ff", "#ffefd5", "#98fb98", "#afeeee", "#ffe4e1", "#d8bfd8"];
+    let index = 0;
+
+    colorBtn.addEventListener("click", () => {
+      document.body.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length; 
+    });
+
+  </script>
+
 </body>
 </html>

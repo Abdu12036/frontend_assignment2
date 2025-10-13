@@ -13,9 +13,22 @@
         <img src="text.svg" alt="logo">
         <nav>
             <a href="#tours">TOURS</a>
-            <a href="contact.html">BOOK</a>
-            <a href="#agency">ABOUT AGENCY</a>
+            <a href="#contact-form">BOOK</a>
+            <button id="openPopupBtn" class="subscribe-btn">Subscribe</button>
         </nav>
+
+        <div id="popupForm" class="popup-overlay">
+            <div class="popup-content">
+            <span id="closePopupBtn" class="close-btn">&times;</span>
+            <h3>Subscribe to Burabay Tour Updates</h3>
+            <form id="subscribeForm">
+                <input type="text"  placeholder="Your Name" required>
+                <input type="email"  placeholder="Your Email" required>
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+            </div>
+        </div>
+
     </header>
 
     <section class="container">
@@ -39,8 +52,16 @@
 🤝 Personalized Service – Whether you travel solo, with family, or in a group, we tailor trips to your needs. <br><br>
 
 ❤️ Trusted by Travelers – Hundreds of happy tourists have explored Kazakhstan with us.</p>
+
+            <div class="datetime-container">
+                <h2>Current Date and Time</h2>
+                <p id="datetime"></p>
+            </div>
+            
         </div>
     
+
+
     <section class="container2">
 
         <div class="tour-container" id="tours">
@@ -79,17 +100,26 @@
 
         <div class="form-container" id="contact-form">
             <h2 class="register-heading">Register now and book a tour at the lowest price!</h2>
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="tel" placeholder="Phone">
-                <input type="email" placeholder="Email">
+            <form id="registerForm" novalidate>
+                <input type="text" id="name" placeholder="Name">
+                <span class="error" id="nameError"></span>
+
+                <input type="tel" id="phone" placeholder="Phone">
+                <span class="error" id="phoneError"></span>
+
+                <input type="email" id="email" placeholder="Email">
+                <span class="error" id="emailError"></span>
+
                 <button type="submit" id="register-btn">Register</button>
             </form>
         </div>
+
     </section>
     <footer>
         <h3>Made by Abdunur Amangeldiyev</h3>
         <p>from SE-2404</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
