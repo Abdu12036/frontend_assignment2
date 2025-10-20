@@ -53,28 +53,6 @@ showTimeBtn.addEventListener("click", () => {
 });
 
 
-// Dynamic Greeting
-function showGreeting() {
-  const greetingElement = document.getElementById("greetingMessage");
-  const now = new Date();
-  const hour = now.getHours();
-
-  let greeting;
-
-  if (hour < 12) {
-    greeting = "Good morning! ☀️ Ready to explore Kazakhstan?";
-  } else if (hour < 18) {
-    greeting = "Good afternoon! 🌤 How about a new adventure today?";
-  } else {
-    greeting = "Good evening! 🌙 Plan your next journey with Nomad Travel.";
-  }
-
-  greetingElement.textContent = greeting;
-}
-
-document.addEventListener("DOMContentLoaded", showGreeting);
-
-
 
 // Greeting bar
 function showGreeting() {
