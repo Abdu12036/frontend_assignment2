@@ -9,15 +9,21 @@
     <title>Nomad travel agency</title>
 </head>
 <body>
+    <div id="greetingBar" class="greeting-bar">
+    <span id="greetingMessage"></span>
+    <button id="closeGreetingBtn" class="close-btn">&times;</button>
+    </div>
+
     <header>
         <img src="text.svg" alt="logo">
         <nav>
             <a href="#tours">TOURS</a>
             <a href="#contact-form">BOOK</a>
             <button id="openPopupBtn" class="subscribe-btn">Subscribe</button>
+            <button id="themeToggle" class="theme-btn">🌙 Night Mode</button>
         </nav>
 
-        <div id="popupForm" class="popup-overlay">
+        <div id="popupForm" class="popup-overlay">   
             <div class="popup-content">
             <span id="closePopupBtn" class="close-btn">&times;</span>
             <h3>Subscribe to Burabay Tour Updates</h3>
@@ -53,14 +59,7 @@
 
 ❤️ Trusted by Travelers – Hundreds of happy tourists have explored Kazakhstan with us.</p>
 
-            <div class="datetime-container">
-                <h2>Current Date and Time</h2>
-                <p id="datetime"></p>
-            </div>
-            
         </div>
-    
-
 
     <section class="container2">
 
@@ -96,6 +95,14 @@
                 </div>
 
         </div>
+        <hr>
+
+        <div class="time-section">
+            <h2>Check the Current Time</h2>
+            <button id="showTimeBtn" class="time-btn">Show Current Time</button>
+            <p id="timeDisplay" class="time-display" style="margin-bottom: 50px;"></p>
+        </div>
+
 
 
         <div class="form-container" id="contact-form">
@@ -121,5 +128,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
 </body>
 </html>
