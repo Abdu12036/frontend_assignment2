@@ -669,3 +669,11 @@ body.night .popup-overlay h3 {
 body.night .time-display {
   color: #fff;
 }
+
+body.night .tour-list a {
+  color: #000;
+}
+
+body.night .copy-section p {
+  color: #000;
+}
