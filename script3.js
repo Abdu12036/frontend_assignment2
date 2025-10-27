@@ -36,9 +36,10 @@ const emelTour = {
     }
 };
 
-// console.log(burabayTour.getInfo());
-// console.log(charynTour.getInfo());
-// console.log(emelTour.getInfo());
+console.log(burabayTour.getInfo());
+console.log(charynTour.getInfo());
+console.log(emelTour.getInfo());
+
 
 
 // Arrays and Iteration
@@ -57,5 +58,5 @@ for (let i = 0; i < tours.length; i++) {
 const cheapTours = tours.filter(tour => tour.price < 130);
 
 cheapTours.forEach(tour => {
-  console.log(`Affordable: ${tour.name} - $${tour.price}`);
+  console.log(`Cheap: ${tour.name} - $${tour.price}`);
 });

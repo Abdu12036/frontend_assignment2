@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Nomad travel agency</title>
 </head>
 <body>
-    <div id="greetingBar" class="greeting-bar">
+    <!-- <div id="greetingBar" class="greeting-bar">
     <span id="greetingMessage"></span>
     <button id="closeGreetingBtn" class="close-btn">&times;</button>
-    </div>
+    </div> -->
+    <div id="scrollBar"></div>
+
 
     <header>
         <img src="text.svg" alt="logo">
@@ -47,24 +51,30 @@
             <p class="agency-parag1">At Nomad Travel Agency, we believe that every journey should be more than just a trip — it should be an unforgettable experience. <br></p>
             <p class="agency-parag2">
 
-🌍 Local Expertise – Our team knows Kazakhstan inside and out, from famous landmarks to hidden gems. <br><br>
+            <section id="stats">
+            <h2>🌟 Our Achievements</h2>
+            <div class="stats-container">
+                <div class="stat">
+                <span class="counter" data-target="50">0</span>
+                <p>Beautiful Destinations</p>
+                </div>
+                <div class="stat">
+                <span class="counter" data-target="10000">0</span>
+                <p>Happy Travelers</p>
+                </div>
+                <div class="stat">
+                <span class="counter" data-target="15">0</span>
+                <p>Years of Experience</p>
+                </div>
+            </div>
+            </section>
 
-🚌 Comfortable Travel – Modern transport, safe routes, and professional guides ensure your comfort. <br><br>
-
-📸 Unique Experiences – Carefully crafted itineraries let you enjoy both iconic sights and authentic local culture. <br><br>
-
-💵 Best Value – Transparent pricing with no hidden fees, plus group discounts. <br><br>
-
-🤝 Personalized Service – Whether you travel solo, with family, or in a group, we tailor trips to your needs. <br><br>
-
-❤️ Trusted by Travelers – Hundreds of happy tourists have explored Kazakhstan with us.</p>
 
         </div>
 
     <section class="container2">
-
+        <h2 style="text-align: center;">The Most Popular Tours</h2>
         <div class="tour-container" id="tours">
-
            
                 <div class="card burabay">
                         <img src="images/borovoe.jpg" alt="burabay image">
@@ -95,13 +105,40 @@
                 </div>
 
         </div>
+
+        <div class="search-container">
+            <h2>Check out Worldwide Tours from Nomad Kazakhstan!</h2>
+            <input type="text" id="searchInput" placeholder="Search tours or destinations...">
+            <ul id="suggestions"></ul>
+        </div>
+
+        <ul class="tour-list" id="tourList">
+            <li><a>Paris – Romantic Getaway</a></li>
+            <li><a>Maldives – Island Adventure</a></li>
+            <li><a>Japan – Cherry Blossom Experience</a></li>
+            <li><a>Egypt – Pyramids & Desert Safari</a></li>
+            <li><a>Italy – Venice & Rome Discovery</a></li>
+            <li><a>Peru – Machu Picchu Expedition</a></li>
+            <li><a>Bali – Beach Paradise</a></li>
+            <li><a>Patagonia – Hiking the Andes</a></li>
+        </ul>
         <hr>
 
-        <div class="time-section">
+        <!-- <div class="time-section">
             <h2>Check the Current Time</h2>
             <button id="showTimeBtn" class="time-btn">Show Current Time</button>
             <p id="timeDisplay" class="time-display" style="margin-bottom: 50px;"></p>
+        </div> -->
+
+        <div class="copy-section">
+            <h2>Discount 20% for new Customers!</h2>
+        <p id="snippet">SUMMER2025-TOUR-DISCOUNT</p>
+        <button class="copy-btn" data-copy-target="#snippet">
+            <i class="fa fa-copy"></i> Copy
+            <span class="tooltip">Copied to clipboard!</span>
+        </button>
         </div>
+
 
 
 
@@ -130,5 +167,6 @@
     <script src="script.js"></script>
     <script src="script2.js"></script>
     <script src="script3.js"></script>
+    <script src="script4.js"></script>
 </body>
 </html>
