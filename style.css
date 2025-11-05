@@ -106,8 +106,7 @@ h1 {
 }
 
 .home-img {
-    height: 467px;
-    width: 1168px;
+    width: 100%;
     margin-bottom: 60px;
     border-radius: 70px;
 }
@@ -147,17 +146,8 @@ body.night #greetingMessage {
 .agency-parag1 {
     font-size: 30px;
     font-weight: 300;
-    width: 1200px;
+    padding: 0 10%;
     margin-bottom: 50px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-
-.agency-parag2 {
-    font-size: 25px;
-    font-weight: 200;
-    width: 1000px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -267,7 +257,7 @@ b {
     }
 
     #searchInput {
-      width: 600px;
+      width: 70%;
       padding: 10px;
       font-size: 16px;
       border: 2px solid #004aad;
@@ -642,6 +632,10 @@ body.night {
   transition: background-color 0.4s, color 0.4s;
 }
 
+body.night .logo {
+  filter: invert(1) brightness(2);
+}
+
 body.night a {
   color: #F1F1F1;
 }
@@ -651,7 +645,7 @@ body.night a.card-btn {
 }
 
 body.night .card {
-  background-color: #212121;
+  background-color: #545454;
 }
 
 body.night .form-container {
@@ -676,4 +670,160 @@ body.night .tour-list a {
 
 body.night .copy-section p {
   color: #000;
+}
+
+
+
+
+@media (max-width: 599px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container, .container2 {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+
+    .agency-heading {
+      font-size: 30px;
+    }
+
+    .agency-parag1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #stats {
+      width: 90%;
+    }
+
+    .card {
+      margin-bottom: 30px;
+    }
+
+    .tour-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .register-heading {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .register-heading {
+      line-height: 34px;
+    }
+
+    #register-btn {
+      text-align: center;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px 10px;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 991px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    nav {
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .logo {
+    margin-bottom: 30px;
+}
+
+    h1 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .container, .container2 {
+        width: 90%;
+    }
+
+    .tour-container {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 40px);
+        max-width: 45%;
+        height: auto;
+    }
+
+    .register-heading {
+        font-size: 36px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .tour-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 31%;
+    } 
 }

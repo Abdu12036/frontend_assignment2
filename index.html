@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,15 +12,10 @@
     <title>Nomad travel agency</title>
 </head>
 <body>
-    <!-- <div id="greetingBar" class="greeting-bar">
-    <span id="greetingMessage"></span>
-    <button id="closeGreetingBtn" class="close-btn">&times;</button>
-    </div> -->
+
     <div id="scrollBar"></div>
-
-
     <header>
-        <img src="text.svg" alt="logo">
+        <img src="text.svg" alt="logo" class="logo">
         <nav>
             <a href="#tours">TOURS</a>
             <a href="#contact-form">BOOK</a>
@@ -48,8 +44,7 @@
 
         <div class="agency-container" id="agency">
             <h2 class="agency-heading">Make your journey more than just a trip!</h2>
-            <p class="agency-parag1">At Nomad Travel Agency, we believe that every journey should be more than just a trip — it should be an unforgettable experience. <br></p>
-            <p class="agency-parag2">
+            <p class="agency-parag1">At Nomad Travel Agency, we believe that every journey should be more than just a trip — it should be an unforgettable experience.</p>
 
             <section id="stats">
             <h2>🌟 Our Achievements</h2>
@@ -124,22 +119,14 @@
         </ul>
         <hr>
 
-        <!-- <div class="time-section">
-            <h2>Check the Current Time</h2>
-            <button id="showTimeBtn" class="time-btn">Show Current Time</button>
-            <p id="timeDisplay" class="time-display" style="margin-bottom: 50px;"></p>
-        </div> -->
-
         <div class="copy-section">
             <h2>Discount 20% for new Customers!</h2>
-        <p id="snippet">SUMMER2025-TOUR-DISCOUNT</p>
-        <button class="copy-btn" data-copy-target="#snippet">
-            <i class="fa fa-copy"></i> Copy
-            <span class="tooltip">Copied to clipboard!</span>
-        </button>
+            <p id="snippet">SUMMER2025-TOUR-DISCOUNT</p>
+            <button class="copy-btn" data-copy-target="#snippet">
+                <i class="fa fa-copy"></i> Copy
+                <span class="tooltip">Copied to clipboard!</span>
+            </button>
         </div>
-
-
 
 
         <div class="form-container" id="contact-form">
