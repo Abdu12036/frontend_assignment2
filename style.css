@@ -518,6 +518,13 @@ input.error-border {
   bottom: 50px;
 }
 
+#toast.success {
+  background-color: #28a745; 
+}
+
+#toast.error {
+  background-color: #dc3545;
+}
 
 
 .subscribe-btn {

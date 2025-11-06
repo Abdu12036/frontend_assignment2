@@ -222,3 +222,148 @@ button {
 button:hover {
   background-color: #3ca76b;
 }
+
+
+/* ============================
+   THEME STYLES
+   ============================ */
+/* --- Night Mode Styles --- */
+body.night {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.night h1,
+body.night h2,
+body.night h3,
+body.night p,
+body.night li {
+  color: #f1f1f1;
+}
+
+body.night .content,
+body.night .price {
+  background-color: #303030;
+  border-radius: 10px;
+}
+
+
+body.night .faq-question {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+}
+
+body.night .faq-answer {
+  background-color: #202020;
+}
+
+
+
+/* ===============================
+   RESPONSIVE DESIGN – MEDIA QUERIES
+   =============================== */
+
+/* ----- Mobile phones (≤480px) ----- */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .head-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .content ul {
+    padding-left: 18px;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  footer h3, footer p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+/* ----- Tablets (≤768px) ----- */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .faq-section {
+    padding: 0 10px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+}
+
+/* ----- Small laptops (≤1024px) ----- */
+@media (max-width: 1024px) {
+  .container {
+    width: 85%;
+    margin: auto;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .content, .price {
+    padding: 0 15px;
+  }
+}

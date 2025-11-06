@@ -1,55 +1,93 @@
-// document.getElementById("registerForm").addEventListener("submit", function (event) {
-//     event.preventDefault(); 
+document.getElementById("registerForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-//     const name = document.getElementById("name");
-//     const phone = document.getElementById("phone");
-//     const email = document.getElementById("email");
+  const name = document.getElementById("name");
+  const phone = document.getElementById("phone");
+  const email = document.getElementById("email");
 
-//     const nameError = document.getElementById("nameError");
-//     const phoneError = document.getElementById("phoneError");
-//     const emailError = document.getElementById("emailError");
+  const nameError = document.getElementById("nameError");
+  const phoneError = document.getElementById("phoneError");
+  const emailError = document.getElementById("emailError");
+  const toast = document.getElementById("toast");
 
-//     nameError.textContent = "";
-//     phoneError.textContent = "";
-//     emailError.textContent = "";
-//     name.classList.remove("error-border");
-//     phone.classList.remove("error-border");
-//     email.classList.remove("error-border");
+  // Reset errors
+  nameError.textContent = "";
+  phoneError.textContent = "";
+  emailError.textContent = "";
+  name.classList.remove("error-border");
+  phone.classList.remove("error-border");
+  email.classList.remove("error-border");
 
-//     let valid = true;
+  let valid = true;
 
-//     if (name.value.trim() === "") {
-//       nameError.textContent = "Name is required.";
-//       name.classList.add("error-border");
-//       valid = false;
-//     }
+  // Validate name
+  if (name.value.trim() === "") {
+    nameError.textContent = "Name is required.";
+    name.classList.add("error-border");
+    valid = false;
+  }
 
-//     const phonePattern = /^[0-9]{7,15}$/; 
-//     if (phone.value.trim() === "") {
-//       phoneError.textContent = "Phone number is required.";
-//       phone.classList.add("error-border");
-//       valid = false;
-//     } else if (!phonePattern.test(phone.value.trim())) {
-//       phoneError.textContent = "Enter a valid phone number (digits only).";
-//       phone.classList.add("error-border");
-//       valid = false;
-//     }
+  // Validate phone
+  const phonePattern = /^[0-9]{7,15}$/;
+  if (phone.value.trim() === "") {
+    phoneError.textContent = "Phone number is required.";
+    phone.classList.add("error-border");
+    valid = false;
+  } else if (!phonePattern.test(phone.value.trim())) {
+    phoneError.textContent = "Enter a valid phone number (digits only).";
+    phone.classList.add("error-border");
+    valid = false;
+  }
 
-//     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     if (email.value.trim() === "") {
-//       emailError.textContent = "Email is required.";
-//       email.classList.add("error-border");
-//       valid = false;
-//     } else if (!emailPattern.test(email.value.trim())) {
-//       emailError.textContent = "Enter a valid email address.";
-//       email.classList.add("error-border");
-//       valid = false;
-//     }
+  // Validate email
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email.value.trim() === "") {
+    emailError.textContent = "Email is required.";
+    email.classList.add("error-border");
+    valid = false;
+  } else if (!emailPattern.test(email.value.trim())) {
+    emailError.textContent = "Enter a valid email address.";
+    email.classList.add("error-border");
+    valid = false;
+  }
 
-//     if (valid) {
-//       this.reset(); 
-//     }
-// });
+  // Show toast based on validation
+  if (valid) {
+    spinner("Form submitted successfully!", "success");
+  } else {
+    showToast("Please correct the errors before submitting.", "error");
+  }
+});
+
+function spinner(message, type) {
+  const $button = $("#register-btn");
+
+  $button.prop("disabled", true);
+  $button.addClass("loading");
+  $button.html('<span class="spinner"></span> Please wait...');
+
+  setTimeout(function() {
+    $button.prop("disabled", false);
+    $button.removeClass("loading");
+    $button.html("Register");
+
+    showToast(message, type);
+    $("#registerForm")[0].reset();
+
+  }, 2000);
+}
+
+function showToast(message, type) {
+  const toast = $("#toast");
+
+  // Set message and style
+  toast.text(message);
+  toast.removeClass("success error").addClass(type);
+
+  // Show and hide
+  toast.addClass("show");
+  setTimeout(() => toast.removeClass("show"), 3000);
+}
 
 
 
